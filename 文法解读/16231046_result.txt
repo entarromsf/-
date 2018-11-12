@@ -1,0 +1,34 @@
+c_i_1:1
+c_i_2:-2
+-9
+situation1
+small than 10
+small or equal than 10
+small than 10
+not equal 10
+big than 10
+big than 10
+big or equal than 10
+not equal 10
+0
+a
+1
+b
+2
+c
+3
+d
+4
+e
+5
+f
+6
+g
+7
+h
+8
+i
+Waiting for input:
+3//此处为输入
+input:3
+result:6

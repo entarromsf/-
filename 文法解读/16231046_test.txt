@@ -1,0 +1,86 @@
+const int c_i_1 = +1,c_i_2 = -2,c_i_3 = 5;
+const char c_c_1 = 'a',c_c_2 = 'b';
+
+int var_i_1,var_i_2;
+int var_i_array[9];
+char var_c_1,var_c_2;
+char var_c_array[9];
+
+void testvoid{
+	printf("c_i_1:",c_i_1);
+	printf("c_i_2:");
+	printf(c_i_1+c_i_2*c_i_3);
+}
+
+void switchtest(int num){
+	switch(num){
+		case 1:printf("situation1");
+		case 2:printf("situation2");
+		case 3:printf("situation3");
+		default:printf("other");
+	}
+}
+
+void testIfElse(int num){
+    if(num < 10)
+    	printf("small than 10");
+    else
+    	printf("big than 10");
+    if(num <=10)
+    	printf("small or equal than 10");
+    else
+    	printf("big than 10");
+    if(num>=10)
+    	printf("big or equal than 10");
+    else
+    	printf("small than 10");
+    if(num!=10)
+    	printf("not equal 10");
+    else
+    	printf("equal 10");
+}
+
+int dowhiletest{
+	int i = 0;
+	int j = 0;
+	do{
+		var_i_array[i] = i;
+		var_c_array[i] = 'a' + i;
+		i = i + 1;
+		j = j + var_i_array[i];
+	}while(i < 9)
+	return j;
+}
+
+int cal(int num){
+	if(num == 1)
+		return 1;
+	else
+		return(cal(num-1)+cal(num-1)*cal(num-1));
+}
+
+void main(){
+	int i;
+	int calnum;
+	int result;
+
+	testvoid;
+	switchtest(-c_i_1 - c_i_2);
+	testIfElse(1);
+	testIfElse(11);
+	dowhiletest;
+	i = 0;
+	do{
+		printf(var_i_array[i]);
+		printf(var_c_array[i]);
+		i = i + 1;
+	}while(i < 9)
+
+	printf("Waiting for input:");
+	scanf(calnum);
+
+	result = cal(calnum);
+
+	printf("input:",calnum);
+	printf("result:",result);
+}

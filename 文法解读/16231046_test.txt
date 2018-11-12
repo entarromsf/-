@@ -49,12 +49,12 @@ int dowhiletest{
 		i = i + 1;
 		j = j + var_i_array[i];
 	}while(i < 9)
-	return j;
+	return (j);
 }
 
 int cal(int num){
 	if(num == 1)
-		return 1;
+		return (1);
 	else
 		return(cal(num-1)+cal(num-1)*cal(num-1));
 }

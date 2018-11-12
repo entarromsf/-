@@ -3,8 +3,8 @@
 #include <ctype.h>
 #include <string>
 const int KEY_NUM = 15;
-const int IDMAXLENGTH = 100000;
-
+const int IDMAXLENGTH = 50;
+const int STRMAXLENGTH = 100000;
 
 enum SymType
 {
@@ -23,7 +23,6 @@ enum SymType
 	SYM_SWITCH,//switch
 	SYM_CASE,//case
 	SYM_DEFAULT,//default
-
 
 	SYM_IDENTIFIER,//±êÊ¶·û
 
@@ -46,20 +45,23 @@ enum SymType
 			   SYM_LBRACE,//{
 			   SYM_RBRACE,//}
 			   SYM_COMMA,//,
+			   SYM_COLON,//:
 			   SYM_SEMICOLON,//;
 			   SYM_PERIOD,//.
 			   SYM_BECOMES,//=
 			   SYS_QUOTE,//'
 			   SYS_DQUOTE,//"
+			   SYM_ZF,//zf
+			   SYM_STRING,//string
+			   SYM_NUL//null
 };
 
-int key_table[KEY_NUM] = { SYM_CONST,SYM_DO,SYM_WHILE,SYM_IF,SYM_ELSE,SYM_INT,SYM_CHAR,SYM_SCANF,SYM_PRINTF,SYM_MAIN,SYM_VOID,SYM_RETURN,SYM_SWITCH,SYM_CASE,SYM_DEFAULT};
+SymType key_table[KEY_NUM] = { SYM_CONST,SYM_DO,SYM_WHILE,SYM_IF,SYM_ELSE,SYM_INT,SYM_CHAR,SYM_SCANF,SYM_PRINTF,SYM_MAIN,SYM_VOID,SYM_RETURN,SYM_SWITCH,SYM_CASE,SYM_DEFAULT };
 
 char *SYM_NAME[] = {
 	"CONST","DO","WHILE","IF","ELSE","INT","CHAR","SCANF","PRINTF","MAIN","VOID","RETURN","SWITCH","CASE","DEFAULT",
 	"IDENTIFIER","NUMBER",
-	""
-	
+	"PLUS","MINUS","TIMES","SLASH","EQU","NEQ","LES","LEQ","GTR","GEQ","LPAREN","RPAREN","LBRACK","RBRACK","LBRACE","RBRACE","COMMA","COLON","SEMICOLON","PERIOD","BECOMES","QUOTE","DQUOTE","zifu","string","Somethingelse"
 };
 
 char* key[KEY_NUM] =

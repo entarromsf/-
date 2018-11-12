@@ -1,11 +1,12 @@
 ﻿  main.cpp
-e:\vs2017project\compiler\编译原理课设\main.cpp(56): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rasalghul\desktop\编译原理课设\compiler\编译原理课设\main.cpp(56): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(129): note: 参见“strcpy”的声明
-e:\vs2017project\compiler\编译原理课设\main.cpp(60): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rasalghul\desktop\编译原理课设\compiler\编译原理课设\main.cpp(60): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\string.h(129): note: 参见“strcpy”的声明
-e:\vs2017project\compiler\编译原理课设\main.cpp(247): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rasalghul\desktop\编译原理课设\compiler\编译原理课设\main.cpp(247): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
-e:\vs2017project\compiler\编译原理课设\main.cpp(248): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\rasalghul\desktop\编译原理课设\compiler\编译原理课设\main.cpp(248): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.14393.0\ucrt\stdio.h(207): note: 参见“fopen”的声明
-  编译原理课设.vcxproj -> E:\vs2017project\compiler\Debug\编译原理课设.exe
-  编译原理课设.vcxproj -> E:\vs2017project\compiler\Debug\编译原理课设.pdb (Partial PDB)
+  LINK : 没有找到 C:\Users\rasalghul\Desktop\编译原理课设\compiler\Debug\编译原理课设.exe 或上一个增量链接没有生成它；正在执行完全链接
+  编译原理课设.vcxproj -> C:\Users\rasalghul\Desktop\编译原理课设\compiler\Debug\编译原理课设.exe
+  编译原理课设.vcxproj -> C:\Users\rasalghul\Desktop\编译原理课设\compiler\Debug\编译原理课设.pdb (Partial PDB)

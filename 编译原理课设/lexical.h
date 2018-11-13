@@ -4,7 +4,8 @@
 #include <string>
 const int KEY_NUM = 15;
 const int IDMAXLENGTH = 50;
-const int STRMAXLENGTH = 100000;
+const int STRMAXLENGTH = 100;
+const int MAXLINE = 50;
 
 enum SymType
 {

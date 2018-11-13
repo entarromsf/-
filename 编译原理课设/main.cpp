@@ -9,12 +9,39 @@ char Str[STRMAXLENGTH];//储存字符串
 int Num = 0;//储存数字
 char ch = ' ';//读字符
 int line = 0;//行数
+int ll = 0;//一行的字符数
+int cc = 0;//读字符指针
+char cline[MAXLINE];
 
 void getCh() {
-	ch = fgetc(infile);
-	if (ch >= 'A' && ch <= 'Z') {
-		ch = ch + 'a' - 'A';
-	}
+//	ch = fgetc(infile);
+	if (cc == ll) {
+		ll = 0;
+		cc = 0;
+		for (int i = 0; i < MAXLINE; i++) {
+			cline[i] = '\0';
+		}
+		fgets(cline, MAXLINE, infile);
+		do {
+			if (cline[ll] == '\n') {
+				cline[ll] = ' ';
+			}
+			if (cline[ll] != '\0') {
+				ll++;
+			}
+			else
+			{
+				break;
+			}
+		} while (1);
+		line++;
+		if (feof(infile)) {
+			cline[ll] = ' ';
+			cline[ll + 1] = EOF;
+		}
+	}//读一行
+	ch = cline[cc];
+	cc++;
 }
 int key_match(char inword[]) {
 	int temp = 0;
@@ -33,9 +60,7 @@ int getSYM() {//取一个词
 		id[i] = '\0';
 	}
 	//处理空白和换行
-	while (ch == ' ' || ch == '\n' || ch == '\t') {
-		if (ch == '\n')
-			line++;
+	while (ch == ' ' || ch == '\t') {
 		getCh();
 	}
 	//程序完
@@ -45,8 +70,12 @@ int getSYM() {//取一个词
 	if (isalpha(ch) || ch == '_') {
 		int idl = 0;
 		do {
+			if (ch >= 'A' && ch <= 'Z') {
+				ch = ch + 'a' - 'A';
+			}
 			inword[idl] = ch;
 			getCh();
+
 			idl++;
 		} while (isalpha(ch) || ch == '_' || isdigit(ch));
 		inword[idl] = '\0';
@@ -69,6 +98,7 @@ int getSYM() {//取一个词
 		sym = SYM_NUMBER;
 		do {
 			Num = 10 * Num + ch - '0';
+			id[numl] = ch;
 			numl++;
 			getCh();
 		} while (isdigit(ch));
@@ -83,6 +113,7 @@ int getSYM() {//取一个词
 		id[0] = ch;
 		do {
 			getCh();
+
 			if (ch != '\'') {
 				//报错
 			}
@@ -96,6 +127,7 @@ int getSYM() {//取一个词
 		int i = 0;
 		do {
 			getCh();
+
 			if (ch != '\"') {
 				id[i] = ch;
 				i++;
@@ -131,6 +163,7 @@ int getSYM() {//取一个词
 			id[0] = '=';
 			id[1] = '=';
 			getCh();
+
 		}
 		else
 		{
@@ -145,6 +178,7 @@ int getSYM() {//取一个词
 			id[0] = '!';
 			id[1] = '=';
 			getCh();
+
 		}
 		else
 		{
@@ -160,6 +194,7 @@ int getSYM() {//取一个词
 			id[0] = '<';
 			id[1] = '=';
 			getCh();
+
 		}
 		else
 		{
@@ -174,6 +209,7 @@ int getSYM() {//取一个词
 			id[0] = '>';
 			id[1] = '=';
 			getCh();
+
 		}
 		else
 		{

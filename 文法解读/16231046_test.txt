@@ -41,8 +41,10 @@ void testIfElse(int num){
 }
 
 int dowhiletest{
-	int i = 0;
-	int j = 0;
+	int i;
+	int j;
+	i = 0;
+	j = 0;
 	do{
 		var_i_array[i] = i;
 		var_c_array[i] = 'a' + i;

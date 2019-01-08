@@ -1,0 +1,10 @@
+const int a = 1;
+int add(int a){
+    return (a);
+}
+
+void main(){
+	int b;
+	b = add(a);
+	printf(b);
+}

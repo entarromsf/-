@@ -10,6 +10,7 @@ void testvoid{
 	printf("c_i_1:",c_i_1);
 	printf("c_i_2:");
 	printf(c_i_1+c_i_2*c_i_3);
+	printf("c_c_1",c_c_1);
 }
 
 void switchtest(int num){
@@ -38,11 +39,14 @@ void testIfElse(int num){
     	printf("not equal 10");
     else
     	printf("equal 10");
+    return;
 }
 
 int dowhiletest{
-	int i = 0;
-	int j = 0;
+	int i;
+	int j;
+	i = 0;
+	j = 0;
 	do{
 		var_i_array[i] = i;
 		var_c_array[i] = 'a' + i;

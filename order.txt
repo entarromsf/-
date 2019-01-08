@@ -1,0 +1,28 @@
+const,int/char,value,name //常量声明
+int/char,  ,  ,name//变量声明
+ints/chars,  , num,name//数组声明
+para, int/char,  ,name//函数参数
+func,int,  ,name//有返回值函数
+func,void,  ,name//无返回值函数
+end,  ,  ,name//函数结束
+plus,v1,v2,v3//v3=v1+v2
+minus,v1,v2,v3//v3=v1-v2
+time,v1,v2,v3//v3=v1*v2
+div,v1,v2,v3//v3=v1/v2
+=,v1,  ,v3//v3=v1
+[]=,v1,v2,v3//v3[v2]=v1
+geta,v1,v2,v3//v3=v1[v2]
+<,v1,v2,v3//v3=v1<v2
+>,v1,v2,v3//v3=v1>v2
+<=,v1,v2,v3//v3=v1<=v2
+>=,v1,v2,v3//v3=v1>=v2
+==,v1,v2,v3//v3=v1==v2
+!=,v1,v2,v3//v3=v1!=v2
+bz,  ,  ,lab//上一个order不满足时跳转
+goto,  ,  ,lab//跳转
+lab:,  ,  ,lab//设置lab
+call,name,  ,var用于表达式内需记录函数返回值时使用//函数调用
+push,	,	,para//函数调用时参数
+ret,	,	,returnvalue(可为空)//返回
+scf,	,	,name//输入
+prt,string,表达式计算结果,表达式输出形式(int/char)//输出
